@@ -5,37 +5,46 @@ Concept: a bestiary entry. His frames are abstract radials; yours catalogue a cr
 
 ## Assets to make (6 stills, 4 clips, 1 track)
 
-Generate stills in 9:16. Use the goblin reference (`reference/goblin-mandala.jpg`) as the image reference in Grok or ChatGPT where the tool allows it so the face stays consistent across frames.
+Stills in Grok, 9:16. Grok reads best with the subject first, style second, format last, and short clauses. Each prompt below is already in that order. Upload `reference/goblin-mandala.jpg` as the image reference on every still so the face holds across frames. Keep readout strings short and in quotes; Grok renders short all-caps monospace strings reliably, long sentences not.
+
+Shared tail (already appended to each prompt, shown once here for editing):
+
+> Style: luminous techno-mysticism, liquid glass and chrome, sacred geometry fused with circuitry, fluorescence-microscopy colors of cyan, magenta, acid green and hot pink, heavy chromatic aberration, pixel-sort glitch, pure black background, optimistic not horror. Format: vertical 9:16, ultra detailed. No muddy browns, no soft studio lighting, no cartoon, no blood.
 
 ### Still A: hero
 
-> luminous techno-mysticism, sacred geometry fused with circuitry, liquid glass and chrome, radial explosion on pure black, fluorescence-microscopy palette of cyan magenta acid green and hot pink, heavy chromatic aberration and pixel-sort, crystalline focal point, scientific imaging mixed with psychedelic render, optimistic not horror, midjourney-like detail. Crystalline goblin face as a mandala center, glass tusks and circuit-veined ears, freckled pale skin with projected RGB traces, one exploding glass eye, radial shards of chrome teeth on black, pixel-sort at the edges. Vertical 9:16, face centered in the upper two thirds, empty black below. Avoid grimdark, blood splatter, muddy browns, flat cartoon, soft studio lighting, watermark, and text.
+> A crystalline goblin face as the center of a mandala. Glass tusks, circuit-veined pointed ears, pale freckled skin with projected RGB circuit traces, one exploding glass eye in the forehead, radial shards of chrome and crystal fanning out behind the head. Face centered in the upper two thirds, empty black below. Style: luminous techno-mysticism, liquid glass and chrome, sacred geometry fused with circuitry, fluorescence-microscopy colors of cyan, magenta, acid green and hot pink, heavy chromatic aberration, pixel-sort glitch, pure black background, optimistic not horror. Format: vertical 9:16, ultra detailed. No muddy browns, no soft studio lighting, no cartoon, no blood, no text.
 
 ### Still B: specimen sheet
 
-Same as A, replace the last sentence with:
-
-> Vertical 9:16, face centered. Sparse monospace lab-readout annotations in acid green at the corners: "SPECIMEN GB-1", "CRYSTALLINE OCULAR INDEX", "SIGNAL INTEGRITY: FLUCTUANT", a small spectral analysis graph bottom left, thin crosshair bottom right. Avoid grimdark, blood splatter, muddy browns, flat cartoon, soft studio lighting, watermark.
+> A crystalline goblin face as the center of a mandala, glass tusks, circuit-veined ears, one exploding glass eye, radial crystal shards, face centered. Scientific specimen sheet layout: small monospace acid-green readout text in the corners reading "SPECIMEN GB-1" top left, "SIGNAL INTEGRITY: FLUCTUANT" top right, a small spectral analysis graph bottom left, a thin crosshair bottom right. Style: luminous techno-mysticism, liquid glass and chrome, sacred geometry fused with circuitry, fluorescence-microscopy colors of cyan, magenta, acid green and hot pink, heavy chromatic aberration, pixel-sort glitch, pure black background, optimistic not horror. Format: vertical 9:16, ultra detailed. No muddy browns, no soft studio lighting, no cartoon, no blood.
 
 ### Still C: eye macro
 
-> [style lock]. Extreme macro of a single crystalline goblin eye, iris of fractured iridescent glass radiating as a rose window, slit pupil opening into a black-hole ring, circuit traces radiating like petals, RGB split on the lashes, pure black surround. Vertical 9:16. Avoid [avoid line].
+> Extreme macro of one crystalline goblin eye. Iris of fractured iridescent glass arranged like a rose window, slit pupil opening into a glowing black-hole ring, circuit traces radiating outward like petals, RGB split on the lashes. Style: luminous techno-mysticism, liquid glass and chrome, sacred geometry fused with circuitry, fluorescence-microscopy colors of cyan, magenta, acid green and hot pink, heavy chromatic aberration, pixel-sort glitch, pure black background, optimistic not horror. Format: vertical 9:16, ultra detailed. No muddy browns, no soft studio lighting, no cartoon, no blood, no text.
 
 ### Still D: 4-by-4 grid
 
-> [style lock]. Crystalline goblin face as a mandala center, glass tusks, circuit-veined ears, one exploding glass eye, rendered as a 4-by-4 grid of the same creature, each cell a mutation of the last, identical framing, identical black background, no borders between cells. Vertical 9:16. Avoid [avoid line].
+> A 4-by-4 grid of sixteen crystalline goblin faces, each a mutation of the last, same framing in every cell, glass tusks, circuit-veined ears, one glass eye, no borders between cells, continuous black background. Style: luminous techno-mysticism, liquid glass and chrome, sacred geometry fused with circuitry, fluorescence-microscopy colors of cyan, magenta, acid green and hot pink, heavy chromatic aberration, pixel-sort glitch, pure black background, optimistic not horror. Format: vertical 9:16, ultra detailed. No muddy browns, no soft studio lighting, no cartoon, no blood, no text.
 
 ### Still E: software-chrome frame
 
-> [style lock]. The crystalline goblin mandala displayed inside a retro operating-system window with chrome bevels and a title bar reading "GB-1.raw", a DAW timeline with glowing cyan waveform below the window, all floating on pure black. Vertical 9:16. Avoid [avoid line but allow text].
+> A retro operating-system window with chrome bevels floating on black, title bar reading "GB-1.raw", inside the window a crystalline goblin mandala face with glass tusks and one glass eye, below the window a DAW timeline with a glowing cyan waveform. Style: luminous techno-mysticism, liquid glass and chrome, sacred geometry fused with circuitry, fluorescence-microscopy colors of cyan, magenta, acid green and hot pink, heavy chromatic aberration, pixel-sort glitch, pure black background, optimistic not horror. Format: vertical 9:16, ultra detailed. No muddy browns, no soft studio lighting, no cartoon, no blood.
 
 ### Still F: closing card
 
-> [style lock]. Pure black field. A single small crystalline goblin eye at the center, radial chrome shards, monospace acid-green readout under it: "SPECIMEN GB-1 // CATALOGUED". Vertical 9:16.
+> A single small crystalline goblin eye centered on a pure black field, radial chrome shards around it, monospace acid-green text beneath reading "SPECIMEN GB-1 // CATALOGUED". Style: luminous techno-mysticism, liquid glass, fluorescence-microscopy colors of cyan, magenta and acid green, chromatic aberration, pure black background. Format: vertical 9:16. No muddy browns, no soft studio lighting, no cartoon.
+
+### If Grok drifts
+
+- Face changes between A and B: regenerate B with A as the image reference instead of the goblin reference.
+- Text garbles: cut the readout to one string per corner, two words max.
+- Grid merges cells: add "sixteen separate portraits in a strict 4 by 4 layout" to the front of D.
+- Too much purple, not enough green: add "acid green dominant" after the color list.
 
 ### Clips (image-to-video, 5 seconds each)
 
-Make from A, C, D, E. Kling, Grok, or Gemini. Negative field, where offered: the avoid line.
+Make from A, C, D, E. Kling, Grok, or Gemini, 9:16. Negative field, where offered: the avoid line.
 
 - **A hero:** Slow radial zoom toward the eye. Chrome shards rotate a few degrees. Chromatic aberration pulses. Pixel-sort flickers at the edges. Face stays still.
 - **C eye:** Slow push into the pupil. Iris facets rotate opposite directions in two rings. Black-hole ring brightens. No other movement.
@@ -78,7 +87,7 @@ Hashtags: keep it to the ones you already use. Add #slopcannon only if you want 
 ## Day-of order
 
 1. Suno first (track length sets everything). 10 min.
-2. Stills A and B. Iterate until the face reads the same in both. 30 min.
+2. Stills A and B in Grok. Iterate until the face reads the same in both. 30 min.
 3. Stills C through F. 20 min.
 4. Four clips. 30 min, mostly waiting.
 5. Cut to the bar table. 30 min.
