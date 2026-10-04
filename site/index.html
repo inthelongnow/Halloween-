@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dina Meyer</title>
+<meta name="description" content="Official site of actress Dina Meyer: Starship Troopers, Saw, Birds of Prey, Dragonheart, Star Trek: Nemesis. News, appearances, Ask Dina, and video shoutouts.">
+<meta property="og:title" content="Dina Meyer">
+<meta property="og:description" content="Actress. Starship Troopers, Saw, Birds of Prey. News, appearances, and video shoutouts.">
+<meta property="og:image" content="assets/dina-hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c0b0a;
+    --bg-2:#141210;
+    --bg-3:#1c1915;
+    --ink:#f3ede4;
+    --ink-2:#bfb6a9;
+    --ink-3:#7d7569;
+    --line:rgba(243,237,228,.1);
+    --brass:#c9a35c;
+    --brass-2:#e4c57f;
+    --cream:#efe6d8;
+    --max:1180px;
+    --gutter:clamp(16px,4vw,48px);
+    --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+    --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.05;margin:0}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+  .eyebrow{font-family:var(--sans);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--brass);font-weight:500}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border:1px solid var(--brass);color:var(--ink);font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;transition:background .25s,color .25s,transform .25s}
+  .btn:hover{background:var(--brass);color:#120f0a;transform:translateY(-1px)}
+  .btn.solid{background:var(--brass);color:#120f0a}
+  .btn.solid:hover{background:var(--brass-2)}
+  button.btn{background:transparent;cursor:pointer;font-family:inherit}
+  .btn.ghost{border-color:var(--line)}
+  .btn.ghost:hover{border-color:var(--brass);background:transparent;color:var(--ink)}
+  section{padding:clamp(72px,10vw,140px) 0;position:relative}
+  .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:clamp(32px,5vw,64px);flex-wrap:wrap}
+  .section-head h2{font-size:clamp(36px,5vw,64px);letter-spacing:-.01em}
+  .section-head p{max-width:46ch;color:var(--ink-2);margin:0;font-size:15px}
+  .rule{height:1px;background:linear-gradient(90deg,var(--brass),transparent);width:72px;margin:18px 0 0}
+
+  /* nav */
+  header{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,backdrop-filter .3s,border-color .3s;border-bottom:1px solid transparent}
+  header.scrolled{background:rgba(12,11,10,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{font-family:var(--serif);font-size:22px;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+  .brand span{color:var(--brass)}
+  .links{display:flex;gap:30px;align-items:center}
+  .links a{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2);transition:color .2s}
+  .links a:hover{color:var(--ink)}
+  .links .btn{padding:10px 18px;margin-left:8px;color:var(--ink)}
+  .burger{display:none;background:none;border:1px solid var(--line);color:var(--ink);width:44px;height:44px;border-radius:2px;cursor:pointer}
+  .burger span{display:block;width:18px;height:1px;background:currentColor;margin:4px auto}
+  .mobile{display:none;position:fixed;inset:72px 0 0 0;background:var(--bg);z-index:49;padding:32px var(--gutter);flex-direction:column;gap:22px}
+  .mobile a{font-family:var(--serif);font-size:32px;color:var(--ink)}
+  .mobile.open{display:flex}
+  @media(max-width:900px){.links{display:none}.burger{display:block}}
+
+  /* hero */
+  .hero{min-height:100svh;display:grid;align-items:center;padding:120px 0 60px;overflow:hidden}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,5vw,72px);align-items:center}
+  .hero h1{font-size:clamp(56px,10vw,140px);letter-spacing:-.02em;font-weight:300}
+  .hero h1 em{font-style:italic;font-weight:300;color:var(--cream)}
+  .hero .lede{font-size:clamp(16px,1.6vw,20px);color:var(--ink-2);max-width:44ch;margin:28px 0 36px}
+  .hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .portrait{position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:2px}
+  .portrait img{width:100%;height:100%;object-fit:cover;filter:saturate(.85) contrast(1.05);transform:scale(1.02)}
+  .portrait::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(12,11,10,.9));pointer-events:none}
+  .portrait .tag{position:absolute;left:20px;bottom:18px;z-index:2;font-family:var(--serif);font-size:18px;font-style:italic;color:var(--cream)}
+  .portrait .tag small{display:block;font-family:var(--sans);font-style:normal;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--brass);margin-bottom:6px}
+  .frame{position:absolute;inset:-14px 14px 14px -14px;border:1px solid var(--line);pointer-events:none;z-index:0}
+  .hero-glow{position:absolute;width:60vw;height:60vw;max-width:800px;max-height:800px;border-radius:50%;background:radial-gradient(circle,rgba(201,163,92,.14),transparent 60%);right:-20vw;top:-10vw;pointer-events:none;filter:blur(20px)}
+  .scroll-hint{position:absolute;left:var(--gutter);bottom:28px;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-3);display:flex;align-items:center;gap:12px}
+  .scroll-hint i{display:block;width:40px;height:1px;background:var(--ink-3)}
+  @media(max-width:900px){
+    .hero{padding-top:100px;min-height:auto}
+    .hero .wrap{grid-template-columns:1fr}
+    .portrait{order:-1;aspect-ratio:4/4.4;max-height:70svh}
+    .scroll-hint{display:none}
+  }
+
+  /* marquee */
+  .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;overflow:hidden;white-space:nowrap;background:var(--bg-2)}
+  .marquee .track{display:inline-flex;gap:56px;animation:slide 40s linear infinite;padding-right:56px}
+  .marquee span{font-family:var(--serif);font-size:22px;letter-spacing:.06em;color:var(--ink-2)}
+  .marquee span::before{content:"·";color:var(--brass);margin-right:56px}
+  @keyframes slide{to{transform:translateX(-50%)}}
+  @media(prefers-reduced-motion:reduce){.marquee .track{animation:none}}
+
+  /* about */
+  .about .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(32px,6vw,96px);align-items:start}
+  .about h2{font-size:clamp(40px,5vw,72px);letter-spacing:-.01em}
+  .about h2 em{font-style:italic;color:var(--brass-2)}
+  .about p{color:var(--ink-2);font-size:17px;margin:0 0 20px;max-width:60ch}
+  .about p.big{font-family:var(--serif);font-size:clamp(22px,2.4vw,30px);color:var(--ink);line-height:1.35;font-weight:300}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:40px}
+  .stats div{background:var(--bg);padding:22px 20px}
+  .stats b{display:block;font-family:var(--serif);font-size:40px;font-weight:300;color:var(--cream)}
+  .stats small{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3)}
+  @media(max-width:900px){.about .wrap{grid-template-columns:1fr}}
+
+  /* work */
+  .work{background:var(--bg-2)}
+  .roles{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .role{position:relative;aspect-ratio:3/4;border:1px solid var(--line);padding:22px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:var(--bg-3);transition:transform .35s,border-color .35s}
+  .role:hover{transform:translateY(-4px);border-color:rgba(201,163,92,.5)}
+  .role::before{content:attr(data-n);position:absolute;top:16px;left:20px;font-family:var(--serif);font-size:13px;letter-spacing:.2em;color:var(--brass)}
+  .role .art{position:absolute;inset:0;opacity:.9;background:
+      radial-gradient(120% 80% at 80% 10%,var(--c1,rgba(201,163,92,.25)),transparent 60%),
+      radial-gradient(90% 60% at 10% 100%,var(--c2,rgba(120,80,40,.3)),transparent 60%),
+      linear-gradient(180deg,transparent,rgba(12,11,10,.85) 80%)}
+  .role .art::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:4px 4px;mix-blend-mode:overlay}
+  .role h3{position:relative;font-size:clamp(24px,2.2vw,32px);line-height:1.05}
+  .role .meta{position:relative;margin-top:10px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+  .role .meta b{display:block;color:var(--brass-2);font-weight:500;margin-bottom:4px;letter-spacing:.08em;text-transform:none;font-size:14px}
+  .more-work{margin-top:48px;display:grid;grid-template-columns:1fr 1fr;gap:0 48px;border-top:1px solid var(--line)}
+  .more-work a{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);color:var(--ink-2);font-size:15px;transition:color .2s}
+  .more-work a:hover{color:var(--ink)}
+  .more-work a span:last-child{color:var(--ink-3);font-size:12px;letter-spacing:.14em;white-space:nowrap}
+  @media(max-width:1000px){.roles{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:700px){.more-work{grid-template-columns:1fr}}
+
+  /* appearances */
+  .events{border-top:1px solid var(--line)}
+  .event{display:grid;grid-template-columns:120px 1fr auto;gap:24px;align-items:center;padding:26px 0;border-bottom:1px solid var(--line)}
+  .event .date{font-family:var(--serif);font-size:30px;line-height:1;color:var(--cream)}
+  .event .date small{display:block;font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin-top:6px}
+  .event h3{font-size:24px}
+  .event p{margin:4px 0 0;color:var(--ink-2);font-size:14px}
+  .event .btn{padding:10px 16px;font-size:11px}
+  @media(max-width:700px){.event{grid-template-columns:1fr;gap:10px}.event .btn{justify-self:start}}
+
+  /* blog / channels */
+  .channels{background:var(--bg-2)}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{border:1px solid var(--line);padding:32px 28px 28px;background:var(--bg);display:flex;flex-direction:column;gap:14px;min-height:300px;transition:border-color .3s,transform .3s}
+  .card:hover{border-color:rgba(201,163,92,.5);transform:translateY(-3px)}
+  .card .glyph{font-family:var(--serif);font-size:44px;color:var(--brass);line-height:1;font-style:italic}
+  .card h3{font-size:30px}
+  .card p{margin:0;color:var(--ink-2);font-size:15px;flex:1}
+  .card .link{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);display:inline-flex;gap:10px;align-items:center}
+  .card .link::after{content:"→";transition:transform .2s}
+  .card:hover .link::after{transform:translateX(4px)}
+  @media(max-width:900px){.cards{grid-template-columns:1fr}}
+
+  /* ask dina */
+  .ask .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,96px);align-items:start}
+  .ask h2{font-size:clamp(40px,5vw,72px)}
+  .ask h2 em{font-style:italic;color:var(--brass-2)}
+  .ask p{color:var(--ink-2);font-size:16px}
+  .qa{border-left:1px solid var(--brass);padding:4px 0 4px 22px;margin:28px 0}
+  .qa q{font-family:var(--serif);font-size:22px;color:var(--cream);quotes:"“" "”"}
+  .qa small{display:block;margin-top:8px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3)}
+  form{display:grid;gap:14px}
+  .field{display:grid;gap:8px}
+  .field label{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-3)}
+  .field input,.field textarea{width:100%;background:var(--bg-3);border:1px solid var(--line);color:var(--ink);padding:14px 16px;font:inherit;font-size:15px;border-radius:2px;outline:none;transition:border-color .2s}
+  .field input:focus,.field textarea:focus{border-color:var(--brass)}
+  .field textarea{min-height:140px;resize:vertical}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .note{font-size:12px;color:var(--ink-3)}
+  @media(max-width:900px){.ask .wrap{grid-template-columns:1fr}.row2{grid-template-columns:1fr}}
+
+  /* cameo band */
+  .cameo{padding:0}
+  .cameo .band{position:relative;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:clamp(64px,9vw,120px) 0;text-align:center;background:
+    radial-gradient(60% 100% at 50% 100%,rgba(201,163,92,.16),transparent 70%),var(--bg-2)}
+  .cameo h2{font-size:clamp(40px,6vw,88px);letter-spacing:-.01em}
+  .cameo h2 em{font-style:italic;color:var(--brass-2)}
+  .cameo p{color:var(--ink-2);max-width:52ch;margin:20px auto 36px;font-size:16px}
+
+  /* contact */
+  .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,96px)}
+  .contact h2{font-size:clamp(40px,5vw,72px)}
+  .contact p{color:var(--ink-2)}
+  .contact dl{margin:32px 0 0;display:grid;gap:18px}
+  .contact dt{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-3)}
+  .contact dd{margin:4px 0 0;font-family:var(--serif);font-size:22px;color:var(--cream)}
+  @media(max-width:900px){.contact .wrap{grid-template-columns:1fr}}
+
+  /* footer */
+  footer{border-top:1px solid var(--line);padding:48px 0 36px;background:var(--bg)}
+  .foot{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+  .social{display:flex;gap:10px}
+  .social a{width:44px;height:44px;border:1px solid var(--line);display:grid;place-items:center;color:var(--ink-2);transition:border-color .2s,color .2s}
+  .social a:hover{border-color:var(--brass);color:var(--brass)}
+  .social svg{width:17px;height:17px;fill:currentColor}
+  .legal{font-size:12px;color:var(--ink-3);display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+  .legal a:hover{color:var(--ink)}
+
+  /* placeholder marker (remove once real content is in) */
+  .ph{position:relative}
+  .qa.ph::after{top:-26px;right:auto;left:22px}
+  .ph::after{content:"placeholder";position:absolute;top:8px;right:8px;font-family:var(--sans);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3);border:1px dashed var(--ink-3);padding:3px 6px;border-radius:2px;pointer-events:none}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top">Dina <span>Meyer</span></a>
+    <nav class="links" aria-label="Primary">
+      <a href="#about">Bio</a>
+      <a href="#work">Work</a>
+      <a href="#appearances">Appearances</a>
+      <a href="#blog">News &amp; Blog</a>
+      <a href="#ask">Ask Dina</a>
+      <a href="#contact">Contact</a>
+      <a class="btn" href="https://www.cameo.com/dinameyer" target="_blank" rel="noopener">Book a Cameo</a>
+    </nav>
+    <button class="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mobile" aria-label="Mobile">
+  <a href="#about">Bio</a>
+  <a href="#work">Work</a>
+  <a href="#appearances">Appearances</a>
+  <a href="#blog">News &amp; Blog</a>
+  <a href="#ask">Ask Dina</a>
+  <a href="#contact">Contact</a>
+  <a href="https://www.cameo.com/dinameyer" target="_blank" rel="noopener" style="color:var(--brass)">Book a Cameo</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Actress · Los Angeles</div>
+      <h1>Dina<br><em>Meyer</em></h1>
+      <p class="lede">Dizzy Flores. Barbara Gordon. Detective Kerry. Three decades of film and television, from <em>Starship Troopers</em> to <em>Saw</em> to <em>Birds of Prey</em>, and still going.</p>
+      <div class="ctas">
+        <a class="btn solid" href="https://www.cameo.com/dinameyer" target="_blank" rel="noopener">Order a video shoutout</a>
+        <a class="btn ghost" href="#work">See the work</a>
+      </div>
+    </div>
+    <div class="portrait ph">
+      <div class="frame"></div>
+      <img src="assets/dina-hero.jpg" alt="Portrait of Dina Meyer" width="1000" height="1152" fetchpriority="high">
+      <div class="tag"><small>Official site</small>dinameyer.com</div>
+    </div>
+  </div>
+  <div class="scroll-hint"><i></i>Scroll</div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Starship Troopers</span><span>Saw</span><span>Birds of Prey</span><span>Dragonheart</span><span>Johnny Mnemonic</span><span>Star Trek: Nemesis</span><span>Beverly Hills, 90210</span><span>Scorpion</span><span>Piranha 3D</span><span>Point Pleasant</span>
+    <span>Starship Troopers</span><span>Saw</span><span>Birds of Prey</span><span>Dragonheart</span><span>Johnny Mnemonic</span><span>Star Trek: Nemesis</span><span>Beverly Hills, 90210</span><span>Scorpion</span><span>Piranha 3D</span><span>Point Pleasant</span>
+  </div>
+</div>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Bio</div>
+      <h2>Queens kid.<br><em>Genre icon.</em></h2>
+      <div class="rule"></div>
+      <div class="stats">
+        <div><b>30+</b><small>Years on screen</small></div>
+        <div><b>60+</b><small>Film &amp; TV credits</small></div>
+        <div><b>4</b><small>Saw films</small></div>
+      </div>
+    </div>
+    <div class="reveal">
+      <p class="big">Born in Queens, New York, Dina Meyer broke out with a recurring role on <em>Beverly Hills, 90210</em> before landing the female lead opposite Keanu Reeves in <em>Johnny Mnemonic</em>.</p>
+      <p>What followed was a run through some of the most-loved genre films of the era: Kara in <em>Dragonheart</em>, the fearless Dizzy Flores in Paul Verhoeven's <em>Starship Troopers</em>, Commander Donatra in <em>Star Trek: Nemesis</em>, and Detective Allison Kerry across the first four <em>Saw</em> films.</p>
+      <p>On television she became the first live-action Barbara Gordon as Oracle in <em>Birds of Prey</em>, and has appeared in <em>Friends</em>, <em>NCIS</em>, <em>Point Pleasant</em>, <em>Castle</em>, and <em>Scorpion</em>. She is a regular on the convention circuit, where she meets the fans who have kept these characters alive for decades.</p>
+      <p>Off set she cooks, she writes, and she answers your questions. That's what this site is for.</p>
+    </div>
+  </div>
+</section>
+
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Selected work</div>
+        <h2>The roles people stop her for</h2>
+      </div>
+      <p>Eight characters, three decades. The full list of credits lives on IMDb.</p>
+    </div>
+    <div class="roles">
+      <a class="role reveal" data-n="01" href="#" style="--c1:rgba(80,140,200,.35);--c2:rgba(200,80,40,.3)">
+        <div class="art"></div>
+        <h3>Starship Troopers</h3>
+        <div class="meta"><b>Dizzy Flores</b>1997 · Film</div>
+      </a>
+      <a class="role reveal" data-n="02" href="#" style="--c1:rgba(160,30,30,.4);--c2:rgba(40,60,70,.4)">
+        <div class="art"></div>
+        <h3>Saw I – IV</h3>
+        <div class="meta"><b>Det. Allison Kerry</b>2004–07 · Films</div>
+      </a>
+      <a class="role reveal" data-n="03" href="#" style="--c1:rgba(201,163,92,.35);--c2:rgba(60,40,120,.35)">
+        <div class="art"></div>
+        <h3>Birds of Prey</h3>
+        <div class="meta"><b>Barbara Gordon / Oracle</b>2002–03 · Series</div>
+      </a>
+      <a class="role reveal" data-n="04" href="#" style="--c1:rgba(60,120,90,.35);--c2:rgba(180,120,40,.3)">
+        <div class="art"></div>
+        <h3>Dragonheart</h3>
+        <div class="meta"><b>Kara</b>1996 · Film</div>
+      </a>
+      <a class="role reveal" data-n="05" href="#" style="--c1:rgba(40,200,180,.25);--c2:rgba(200,40,120,.25)">
+        <div class="art"></div>
+        <h3>Johnny Mnemonic</h3>
+        <div class="meta"><b>Jane</b>1995 · Film</div>
+      </a>
+      <a class="role reveal" data-n="06" href="#" style="--c1:rgba(90,110,180,.35);--c2:rgba(20,30,60,.5)">
+        <div class="art"></div>
+        <h3>Star Trek: Nemesis</h3>
+        <div class="meta"><b>Commander Donatra</b>2002 · Film</div>
+      </a>
+      <a class="role reveal" data-n="07" href="#" style="--c1:rgba(220,160,60,.3);--c2:rgba(140,40,40,.3)">
+        <div class="art"></div>
+        <h3>Scorpion</h3>
+        <div class="meta"><b>Veronica Dineen</b>2016–17 · Series</div>
+      </a>
+      <a class="role reveal" data-n="08" href="#" style="--c1:rgba(230,120,160,.3);--c2:rgba(60,30,80,.4)">
+        <div class="art"></div>
+        <h3>Beverly Hills, 90210</h3>
+        <div class="meta"><b>Lucinda Nicholson</b>1993–94 · Series</div>
+      </a>
+    </div>
+    <div class="more-work reveal">
+      <a href="#"><span>Bats · Dr. Sheila Casper</span><span>1999</span></a>
+      <a href="#"><span>Piranha 3D · Paula Montellano</span><span>2010</span></a>
+      <a href="#"><span>Point Pleasant · Amber Hargrove</span><span>2005</span></a>
+      <a href="#"><span>Dead in Tombstone · Calathea Massey</span><span>2013</span></a>
+      <a href="#"><span>D-Tox · Mary</span><span>2002</span></a>
+      <a href="#"><span>Starship Troopers: Traitor of Mars · Dizzy (voice)</span><span>2017</span></a>
+      <a href="#"><span>NCIS · Holly Snow</span><span>2010–11</span></a>
+      <a href="https://www.imdb.com/name/nm0000539/" target="_blank" rel="noopener" style="color:var(--brass)"><span>Full filmography on IMDb</span><span>→</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="appearances">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Appearances</div>
+        <h2>Come say hi</h2>
+      </div>
+      <p>Conventions, signings, and screenings. Dates are added as they're confirmed, and announced first on social.</p>
+    </div>
+    <div class="events reveal">
+      <div class="event ph">
+        <div class="date">TBA<small>2026</small></div>
+        <div><h3>Next convention appearance</h3><p>City, venue, and table details go here. Photo ops and autograph info link out to the event's page.</p></div>
+        <a class="btn ghost" href="#contact">Get notified</a>
+      </div>
+      <div class="event ph">
+        <div class="date">TBA<small>2026</small></div>
+        <div><h3>Screening or panel</h3><p>Anniversary screenings, cast reunions, and Q&amp;As slot in the same way.</p></div>
+        <a class="btn ghost" href="#contact">Get notified</a>
+      </div>
+      <div class="event ph">
+        <div class="date">TBA<small>2026</small></div>
+        <div><h3>Signing</h3><p>Private signings and virtual events, with a link to the vendor.</p></div>
+        <a class="btn ghost" href="#contact">Get notified</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="channels" id="blog">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">News &amp; blog</div>
+        <h2>From Dina</h2>
+      </div>
+      <p>Everything that used to be scattered across menus, in one place.</p>
+    </div>
+    <div class="cards">
+      <a class="card reveal" href="#">
+        <div class="glyph">N</div>
+        <h3>News</h3>
+        <p>New projects, press, trailers, and release dates. Short posts, written by Dina, not a publicist.</p>
+        <span class="link">Latest news</span>
+      </a>
+      <a class="card reveal" href="#">
+        <div class="glyph">R</div>
+        <h3>Recipes &amp; blog</h3>
+        <p>What's on the stove and what's on her mind. The recipes section from the old site, with photos that do them justice.</p>
+        <span class="link">Read the blog</span>
+      </a>
+      <a class="card reveal" href="#ask">
+        <div class="glyph">?</div>
+        <h3>Ask Dina</h3>
+        <p>Fans have been sending questions for years. Here they get answered in public, searchable, and organized.</p>
+        <span class="link">Ask a question</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="ask" id="ask">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Ask Dina</div>
+      <h2>You ask.<br><em>She answers.</em></h2>
+      <div class="rule"></div>
+      <p style="margin-top:24px">Questions about the films, the characters, the craft, or the kitchen. Dina reads every one and answers a handful each month.</p>
+      <div class="qa ph">
+        <q>Sample answered question appears here, pulled from the Ask Dina archive.</q>
+        <small>Answered · Month 2026</small>
+      </div>
+      <p class="note">Submissions are moderated. Nothing is published without Dina's say-so.</p>
+    </div>
+    <form class="reveal" onsubmit="event.preventDefault();this.querySelector('button').textContent='Sent. Thank you!';">
+      <div class="row2">
+        <div class="field"><label for="q-name">Name</label><input id="q-name" name="name" type="text" placeholder="Your first name" required></div>
+        <div class="field"><label for="q-from">Where from</label><input id="q-from" name="from" type="text" placeholder="City, country"></div>
+      </div>
+      <div class="field"><label for="q-text">Your question</label><textarea id="q-text" name="question" placeholder="Ask away" required></textarea></div>
+      <div class="field"><label for="q-email">Email (optional, never shown)</label><input id="q-email" name="email" type="email" placeholder="you@example.com"></div>
+      <button class="btn solid" type="submit" style="justify-self:start;cursor:pointer;font-family:inherit">Send to Dina</button>
+    </form>
+  </div>
+</section>
+
+<section class="cameo">
+  <div class="band">
+    <div class="wrap reveal">
+      <div class="eyebrow">Video shoutouts</div>
+      <h2 style="margin-top:14px">A message <em>from Dina</em>, just for them.</h2>
+      <p>Birthdays, pep talks, a Dizzy quote for the Trooper in your life. Personalized videos, recorded by Dina, delivered through Cameo.</p>
+      <a class="btn solid" href="https://www.cameo.com/dinameyer" target="_blank" rel="noopener">Order on Cameo</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Contact</div>
+      <h2>Get in touch</h2>
+      <div class="rule"></div>
+      <p style="margin-top:24px">For bookings, press, and appearance requests, use the form. For fan questions, head to Ask Dina.</p>
+      <dl class="ph">
+        <div><dt>Bookings &amp; appearances</dt><dd>agent or management contact</dd></div>
+        <div><dt>Press</dt><dd>publicist contact</dd></div>
+        <div><dt>Fan mail</dt><dd>mailing address, if offered</dd></div>
+      </dl>
+    </div>
+    <form class="reveal" onsubmit="event.preventDefault();this.querySelector('button').textContent='Sent. Thank you!';">
+      <div class="row2">
+        <div class="field"><label for="c-name">Name</label><input id="c-name" name="name" type="text" required></div>
+        <div class="field"><label for="c-email">Email</label><input id="c-email" name="email" type="email" required></div>
+      </div>
+      <div class="field"><label for="c-subject">Subject</label><input id="c-subject" name="subject" type="text" placeholder="Booking, press, appearance…"></div>
+      <div class="field"><label for="c-msg">Message</label><textarea id="c-msg" name="message" required></textarea></div>
+      <button class="btn" type="submit" style="justify-self:start;cursor:pointer;font-family:inherit">Send message</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <a class="brand" href="#top">Dina <span>Meyer</span></a>
+    <div class="social">
+      <a href="https://www.facebook.com/TheRealDinaMeyer/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 22v-8.2h2.8l.4-3.3h-3.2V8.4c0-.9.3-1.6 1.6-1.6h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.3v3.3h2.8V22h3.4z"/></svg></a>
+      <a href="https://x.com/DinaMeyer" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg viewBox="0 0 24 24"><path d="M17.5 3h3.1l-6.8 7.8L21.8 21h-6.3l-4.9-6.4L5 21H1.9l7.3-8.3L1.5 3H8l4.4 5.9L17.5 3zm-1.1 16.2h1.7L7.1 4.7H5.3l11.1 14.5z"/></svg></a>
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7.3a4.7 4.7 0 100 9.4 4.7 4.7 0 000-9.4zm0 7.7a3 3 0 110-6 3 3 0 010 6zm6-7.9a1.1 1.1 0 11-2.2 0 1.1 1.1 0 012.2 0zM21 8.3c-.1-1.5-.4-2.8-1.5-3.9S17.1 3 15.6 3C14.1 2.9 9.9 2.9 8.4 3 6.9 3 5.6 3.4 4.5 4.4S3 6.8 3 8.3c-.1 1.5-.1 5.9 0 7.4.1 1.5.4 2.8 1.5 3.9s2.4 1.4 3.9 1.5c1.5.1 5.7.1 7.2 0 1.5-.1 2.8-.4 3.9-1.5s1.4-2.4 1.5-3.9c.1-1.5.1-5.9 0-7.4zm-2 9c-.3.8-.9 1.4-1.7 1.7-1.2.5-4 .4-5.3.4s-4.1.1-5.3-.4c-.8-.3-1.4-.9-1.7-1.7-.5-1.2-.4-4-.4-5.3s-.1-4.1.4-5.3c.3-.8.9-1.4 1.7-1.7 1.2-.5 4-.4 5.3-.4s4.1-.1 5.3.4c.8.3 1.4.9 1.7 1.7.5 1.2.4 4 .4 5.3s.1 4.1-.4 5.3z"/></svg></a>
+      <a href="https://www.youtube.com/@DinaMeyerOfficial" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23 7.2s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.3-1C16.5 3.7 12 3.7 12 3.7s-4.5 0-7.8.2c-.5.1-1.5.1-2.3 1C1.2 5.6 1 7.2 1 7.2S.8 9.1.8 11v1.8c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.6.2 7.6.2s4.5 0 7.8-.2c.5-.1 1.5-.1 2.3-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8V11c0-1.9-.2-3.8-.2-3.8zM9.7 14.9V8.3l6 3.3-6 3.3z"/></svg></a>
+      <a href="https://www.imdb.com/name/nm0000539/" target="_blank" rel="noopener" aria-label="IMDb"><svg viewBox="0 0 24 24"><path d="M2 6h2.6v12H2zM6 6h3.3l.9 5.6L11.1 6h3.3v12h-2.2V9.4L10.9 18H9.3L8 9.4V18H6zM15.8 6h3.4c2.5 0 3.3 1 3.3 3.3v5.4c0 2.3-.8 3.3-3.3 3.3h-3.4zm2.5 2v8h.8c.7 0 .9-.3.9-1V9c0-.7-.2-1-.9-1z"/></svg></a>
+    </div>
+    <div class="legal">
+      <span>© <span id="yr">2026</span> Dina Meyer. All rights reserved.</span>
+      <a href="#">Privacy</a>
+      <a href="#">Disclaimer</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hdr=document.querySelector('header');
+  const onScroll=()=>hdr.classList.toggle('scrolled',scrollY>24);
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  const burger=document.querySelector('.burger'),mobile=document.querySelector('.mobile');
+  burger.addEventListener('click',()=>{const o=mobile.classList.toggle('open');burger.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''});
+  mobile.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobile.classList.remove('open');document.body.style.overflow=''}));
+
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4)*70+'ms';io.observe(el)});
+
+  document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
